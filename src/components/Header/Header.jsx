@@ -138,8 +138,25 @@ const Header = () => {
 
       {/* Mobile Menu - Fuera del header */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 backdrop-blur-xl bg-black/95 z-[60]">
-          <div className="flex flex-col justify-center items-center h-full space-y-6 px-8 pt-20">
+        <div 
+          className="lg:hidden fixed inset-0 z-[60] backdrop-blur-md bg-black/70"
+          onClick={() => setMobileMenuOpen(false)}
+        >
+          <div 
+            className="relative flex flex-col justify-center items-center h-full space-y-6 px-8 pt-20"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              onClick={() => setMobileMenuOpen(false)}
+              className="absolute top-6 right-6 text-gray-100 hover:text-perro-red transition-colors duration-300"
+              aria-label="Close menu"
+            >
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M18 6L6 18M6 6l12 12" />
+              </svg>
+            </button>
+            
             {menuItems.map((item) => (
               <button
                 key={item.id}

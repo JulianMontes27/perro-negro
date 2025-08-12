@@ -113,9 +113,12 @@ const Tickets = () => {
               </div>
 
               {/* Buy Button */}
-              <button
+              <a
+                href="https://eventos.biotickets.com/ordertickets.asp?p=158&backurl=//eventos.biotickets.com/default.asp"
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`
-                  w-full py-4 px-6 sm:px-8 font-semibold text-sm sm:text-lg lg:text-xl transition-all duration-300 uppercase tracking-wider min-h-[44px]
+                  block text-center w-full py-4 px-6 sm:px-8 font-semibold text-sm sm:text-lg lg:text-xl transition-all duration-300 uppercase tracking-wider min-h-[44px]
                   ${ticket.popular 
                     ? 'bg-perro-red text-gray-100 hover:bg-transparent hover:text-perro-red border-2 border-perro-red'
                     : 'bg-perro-red text-gray-100 hover:bg-transparent hover:text-perro-red border-2 border-perro-red'
@@ -123,7 +126,7 @@ const Tickets = () => {
                 `}
               >
                 COMPRAR AHORA
-              </button>
+              </a>
               
             </div>
             
