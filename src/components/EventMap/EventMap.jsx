@@ -1,9 +1,10 @@
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const EventMap = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const mapImageUrl = "https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/map.png";
+  const mapImageUrl =
+    "https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/mapa.jpg";
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -13,13 +14,14 @@ const EventMap = () => {
       {/* Simple Section */}
       <section className="w-full bg-gradient-to-b from-black to-perro-red py-16 lg:py-20">
         <div className="max-w-6xl mx-auto px-6">
-
           {/* Main Content with Side Patterns */}
           <div className="relative">
-            
             {/* Left Side Pattern */}
-            <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-full hidden 2xl:block" style={{ left: '-16rem' }}>
-              <img 
+            <div
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-full hidden 2xl:block"
+              style={{ left: "-16rem" }}
+            >
+              <img
                 src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/pattern7.png"
                 alt="Patrón decorativo izquierdo"
                 className="w-auto h-56 lg:h-64 xl:h-72 opacity-70"
@@ -28,8 +30,11 @@ const EventMap = () => {
             </div>
 
             {/* Right Side Pattern */}
-            <div className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-full hidden 2xl:block" style={{ right: '-16rem' }}>
-              <img 
+            <div
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-full hidden 2xl:block"
+              style={{ right: "-16rem" }}
+            >
+              <img
                 src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/pattern8.png"
                 alt="Patrón decorativo derecho"
                 className="w-auto h-56 lg:h-64 xl:h-72 opacity-70"
@@ -39,7 +44,6 @@ const EventMap = () => {
 
             {/* Two Column Layout */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              
               {/* Left Column - Title, Text and Button */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -52,10 +56,11 @@ const EventMap = () => {
                 <h2 className="text-white text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black font-title mb-4 sm:mb-6">
                   MAPA DEL EVENTO
                 </h2>
-                
+
                 {/* Subtitle */}
                 <p className="text-gray-200 text-base sm:text-lg lg:text-xl mb-6 sm:mb-8">
-                  Explora todas las zonas del evento y planifica tu experiencia perfecta
+                  Explora todas las zonas del evento y planifica tu experiencia
+                  perfecta
                 </p>
 
                 {/* Simple Map Button - Hidden on mobile */}
@@ -75,18 +80,18 @@ const EventMap = () => {
                 viewport={{ once: true }}
                 className="flex justify-center"
               >
-                <div 
+                <div
                   className="relative cursor-pointer group max-w-sm w-full"
                   onClick={openModal}
                 >
                   <div className="aspect-[4/5] w-full overflow-hidden rounded-lg shadow-xl">
-                    <img 
+                    <img
                       src={mapImageUrl}
                       alt="Preview del mapa del evento"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  
+
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 rounded-lg transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -97,10 +102,8 @@ const EventMap = () => {
                   </div>
                 </div>
               </motion.div>
-
             </div>
           </div>
-
         </div>
       </section>
 
@@ -127,10 +130,10 @@ const EventMap = () => {
             >
               ×
             </button>
-            
+
             {/* Map image container */}
             <div className="max-w-5xl max-h-[85vh] w-full h-full flex items-center justify-center">
-              <img 
+              <img
                 src={mapImageUrl}
                 alt="Mapa del evento Club Perro Negro - Vista completa"
                 className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
