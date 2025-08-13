@@ -21,21 +21,6 @@ const Sponsors = () => {
     {
       name: "Touring", 
       logo: "https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/touring_logo.png"
-    },
-    {
-      name: "Espacio Patrocinador 5",
-      logo: null,
-      placeholder: true
-    },
-    {
-      name: "Espacio Patrocinador 6",
-      logo: null,
-      placeholder: true
-    },
-    {
-      name: "Espacio Patrocinador 7",
-      logo: null,
-      placeholder: true
     }
   ];
 
