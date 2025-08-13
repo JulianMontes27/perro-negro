@@ -56,7 +56,7 @@ const Tickets = () => {
             }}
             viewport={{ once: true }}
             className={`
-              relative bg-black min-h-[40vh] sm:min-h-[50vh] lg:min-h-[60vh] h-auto flex flex-col justify-end p-6 sm:p-8 lg:p-12 xl:p-16
+              relative bg-black min-h-[40vh] sm:min-h-[50vh] lg:min-h-[500px] h-auto flex flex-col justify-end p-6 sm:p-8 lg:px-6 lg:py-8
               border-t border-b border-perro-gray sm:border-r
             `}
           >
@@ -74,7 +74,7 @@ const Tickets = () => {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-10 lg:flex lg:flex-col lg:items-center lg:text-center w-full">
+            <div className="relative z-10 w-full">
               
               {/* Ticket Name */}
               <div className="mb-8 w-full">
@@ -85,7 +85,7 @@ const Tickets = () => {
 
               {/* Price Display */}
               <div className="mb-10 w-full">
-                <div className="flex items-baseline gap-2 mb-2 lg:justify-center">
+                <div className="flex items-baseline gap-2 mb-2">
                   <span className="text-gray-400 text-lg sm:text-xl">$</span>
                   <span className={`text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-none ${
                     ticket.popular ? 'text-perro-red' : 'text-perro-red'
@@ -97,7 +97,7 @@ const Tickets = () => {
               </div>
 
               {/* Features List */}
-              <div className="mb-10 w-full lg:max-w-sm lg:mx-auto">
+              <div className="mb-10 w-full">
                 <div className="space-y-4">
                   {ticket.features.map((feature, i) => (
                     <div key={i} className="flex items-start gap-3 text-left">
