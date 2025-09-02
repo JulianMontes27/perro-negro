@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { imageUrls } from '../../utils/imageUrls';
 
 const WorldTour = () => {
   const tourDates = [
@@ -59,7 +60,7 @@ const WorldTour = () => {
         {Array.from({ length: 20 }, (_, index) => (
           <img 
             key={index}
-            src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/pattern5.png"
+            src={imageUrls.pattern5}
             alt="Patrón decorativo World Tour"
             className="w-auto h-6 md:h-8 lg:h-10 flex-shrink-0"
             loading="lazy"
@@ -79,7 +80,7 @@ const WorldTour = () => {
         >
           {/* Logo */}
           <img 
-            src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//logoxsblack.png"
+            src={imageUrls.logoxsblack}
             alt="Perro Negro World Tour 2025 - Logo negro oficial"
             className="w-auto h-16 md:h-20 lg:h-24 mx-auto"
             loading="lazy"
@@ -187,7 +188,7 @@ const WorldTour = () => {
               {Array.from({ length: 12 }, (_, index) => (
                 <img 
                   key={index}
-                  src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/pattern6.png"
+                  src={imageUrls.pattern6}
                   alt="Decoración Around The World"
                   className="w-auto h-6 md:h-8 lg:h-10 flex-shrink-0"
                   loading="lazy"

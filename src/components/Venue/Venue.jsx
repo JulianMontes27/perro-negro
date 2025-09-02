@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { imageUrls } from '../../utils/imageUrls';
 
 const Venue = () => {
   return (
@@ -14,7 +15,7 @@ const Venue = () => {
             viewport={{ once: true }}
             className="flex flex-col justify-center p-8 lg:p-12 space-y-6 bg-cover bg-center"
             style={{
-              backgroundImage: 'url(https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/pattern1.jpg)'
+              backgroundImage: `url(${imageUrls.pattern1})`
             }}
           >
             

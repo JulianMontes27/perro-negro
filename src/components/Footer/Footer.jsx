@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { imageUrls } from '../../utils/imageUrls';
 
 const Footer = () => {
   return (
@@ -16,7 +17,7 @@ const Footer = () => {
           
           {/* Logo */}
           <img 
-            src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//logoxsred2.png"
+            src={imageUrls.logoxsred2}
             alt="Perro Negro Experience 2025 - Logo oficial footer"
             className="w-auto h-8 sm:h-12 mx-auto"
             loading="lazy"

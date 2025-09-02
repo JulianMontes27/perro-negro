@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { imageUrls } from '../../utils/imageUrls';
 
 const LineUp = () => {
   const cities = [
@@ -18,7 +19,7 @@ const LineUp = () => {
 
   return (
     <section className="py-20 sm:py-24 lg:py-32 bg-black relative overflow-hidden" style={{
-      backgroundImage: 'url(https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//pattern1.jpg)',
+      backgroundImage: `url(${imageUrls.pattern1})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat'
@@ -85,7 +86,7 @@ const LineUp = () => {
                 <div 
                   className="w-full h-full bg-gray-900 border-2 border-gray-700 group-hover:border-perro-red transition-all duration-300 bg-cover bg-center"
                   style={{
-                    backgroundImage: index === 0 ? 'url(https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//vita.png)' : 'none'
+                    backgroundImage: index === 0 ? `url(${imageUrls.vita})` : 'none'
                   }}
                 >
                   <div className="absolute inset-0 bg-black bg-opacity-40"></div>

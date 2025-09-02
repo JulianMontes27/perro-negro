@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { imageUrls } from '../../utils/imageUrls';
 
 const Hero = () => {
   const ref = useRef(null);
@@ -28,7 +29,7 @@ const Hero = () => {
         aria-label="Video de fondo del evento de reggaeton en Bogotá"
       >
         <source
-          src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/video.mp4"
+          src={imageUrls.video}
           type="video/mp4"
         />
       </motion.video>
@@ -62,12 +63,12 @@ const Hero = () => {
           className="mb-6"
         >
           <img
-            src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//logoxlred2.png"
+            src={imageUrls.logoxlred2}
             alt="Perro Negro Experience 2025 - Logo oficial del evento de reggaeton en Bogotá"
             className="w-auto h-56 sm:h-48 md:h-64 lg:h-80 xl:h-96 mx-auto glitch-logo"
             style={{
               backgroundImage:
-                "url(https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//logoxlred2.png)",
+                `url(${imageUrls.logoxlred2})`,
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
@@ -132,7 +133,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 1.8 }}
         >
           <img
-            src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//small_logos.png"
+            src={imageUrls.smallLogos}
             alt="Patrocinadores oficiales de Perro Negro Experience 2025 Bogotá"
             className="w-auto h-12 sm:h-12 md:h-16 mx-auto opacity-80"
           />

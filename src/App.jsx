@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import { imageUrls } from './utils/imageUrls';
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import EventInfo from "./components/EventInfo/EventInfo";
@@ -43,7 +44,7 @@ function App() {
               style={{
                 width: "150px",
                 backgroundImage:
-                  "url(https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//pattern3.jpg)",
+                  `url(${imageUrls.pattern3})`,
                 backgroundSize: "100% 100%",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
@@ -57,7 +58,7 @@ function App() {
               style={{
                 width: "150px",
                 backgroundImage:
-                  "url(https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//pattern3.jpg)",
+                  `url(${imageUrls.pattern3})`,
                 backgroundSize: "100% 100%",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",

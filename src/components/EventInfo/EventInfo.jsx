@@ -1,6 +1,51 @@
 import { motion } from 'framer-motion';
+import { useMemo } from 'react';
+import { imageUrls } from '../../utils/imageUrls';
 
 const EventInfo = () => {
+  // Memoize the image pattern to prevent re-generation on every render
+  const imagePattern = useMemo(() => {
+    const images = [];
+    const imageOptions = [
+      imageUrls.fire2,
+      imageUrls.fire3, 
+      imageUrls.alert,
+      imageUrls.coin
+    ];
+    
+    let previousImage = '';
+    
+    for (let i = 0; i < 30; i++) {
+      let selectedImage;
+      
+      do {
+        const randomNum = Math.random();
+        if (randomNum > 0.6) {
+          selectedImage = imageOptions[0]; // fire2 (40% chance)
+        } else if (randomNum > 0.35) {
+          selectedImage = imageOptions[1]; // fire3 (25% chance)
+        } else if (randomNum > 0.17) {
+          selectedImage = imageOptions[3]; // coin (18% chance)
+        } else {
+          selectedImage = imageOptions[2]; // alert (17% chance)
+        }
+      } while (
+        (selectedImage === imageOptions[1] || selectedImage === imageOptions[2] || selectedImage === imageOptions[3]) && 
+        selectedImage === previousImage
+      );
+      
+      images.push({
+        id: i,
+        src: selectedImage,
+        alt: "Íconos decorativos del evento - fuego, monedas y alertas"
+      });
+      
+      previousImage = selectedImage;
+    }
+    
+    return images;
+  }, []); // Empty dependency array means this only runs once
+
   return (
     <section className="py-20 sm:py-24 lg:py-32 bg-black relative">
       <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10">
@@ -94,54 +139,17 @@ const EventInfo = () => {
         viewport={{ once: true }}
         className="w-full mt-16 sm:mt-32 mb-2"
       >
-        <div className="max-w-none mx-auto flex overflow-x-hidden"
-        >
-          {(() => {
-            const images = [];
-            const imageOptions = [
-              'https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//fire2.png',
-              'https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//fire3.png',
-              'https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//alert.png',
-              'https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//coin.png'
-            ];
-            
-            let previousImage = '';
-            
-            for (let i = 0; i < 30; i++) {
-              let selectedImage;
-              
-              do {
-                const randomNum = Math.random();
-                if (randomNum > 0.6) {
-                  selectedImage = imageOptions[0]; // fire2 (40% chance)
-                } else if (randomNum > 0.35) {
-                  selectedImage = imageOptions[1]; // fire3 (25% chance)
-                } else if (randomNum > 0.17) {
-                  selectedImage = imageOptions[3]; // coin (18% chance)
-                } else {
-                  selectedImage = imageOptions[2]; // alert (17% chance)
-                }
-              } while (
-                (selectedImage === imageOptions[1] || selectedImage === imageOptions[2] || selectedImage === imageOptions[3]) && 
-                selectedImage === previousImage
-              );
-              
-              images.push(
-                <img 
-                  key={i}
-                  src={selectedImage}
-                  alt="Íconos decorativos del evento - fuego, monedas y alertas"
-                  className="h-[40px] sm:h-[80px] w-auto flex-shrink-0"
-                  style={{ imageRendering: 'pixelated' }}
-                  loading="lazy"
-                />
-              );
-              
-              previousImage = selectedImage;
-            }
-            
-            return images;
-          })()}
+        <div className="max-w-none mx-auto flex overflow-x-hidden">
+          {imagePattern.map((image) => (
+            <img 
+              key={image.id}
+              src={image.src}
+              alt={image.alt}
+              className="h-[40px] sm:h-[80px] w-auto flex-shrink-0"
+              style={{ imageRendering: 'pixelated' }}
+              loading="lazy"
+            />
+          ))}
         </div>
       </motion.div>
       </div>

@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import { imageUrls } from '../../utils/imageUrls';
 
 const Header = () => {
   const { scrollY } = useScroll();
@@ -50,14 +51,14 @@ const Header = () => {
           onClick={() => scrollToSection('hero')}
         >
           <motion.img 
-            src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//logoxsgray.png"
+            src={imageUrls.logoxsgray}
             alt="Perro Negro Experience - Logo gris"
             className="w-auto h-6 xs:h-8 sm:h-10 md:h-12 transition-opacity duration-500"
             animate={{ opacity: scrolled ? 0 : 1 }}
             style={{ position: 'absolute' }}
           />
           <motion.img 
-            src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro//logoxsred2.png"
+            src={imageUrls.logoxsred2}
             alt="Perro Negro Experience - Logo rojo"
             className="w-auto h-6 xs:h-8 sm:h-10 md:h-12 transition-opacity duration-500"
             animate={{ opacity: scrolled ? 1 : 0 }}

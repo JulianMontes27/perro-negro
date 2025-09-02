@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { imageUrls } from '../../utils/imageUrls';
 
 const EventMap = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const mapImageUrl =
-    "https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/mapa.jpg";
+  const mapImageUrl = imageUrls.map;
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -22,7 +22,7 @@ const EventMap = () => {
               style={{ left: "-16rem" }}
             >
               <img
-                src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/pattern7.png"
+                src={imageUrls.pattern7}
                 alt="Patrón decorativo izquierdo"
                 className="w-auto h-56 lg:h-64 xl:h-72 opacity-70"
                 loading="lazy"
@@ -35,7 +35,7 @@ const EventMap = () => {
               style={{ right: "-16rem" }}
             >
               <img
-                src="https://jtfcfsnksywotlbsddqb.supabase.co/storage/v1/object/public/perro-negro/pattern8.png"
+                src={imageUrls.pattern8}
                 alt="Patrón decorativo derecho"
                 className="w-auto h-56 lg:h-64 xl:h-72 opacity-70"
                 loading="lazy"
