@@ -35,30 +35,12 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex justify-center items-center gap-6">
             <a
-              href="https://instagram.com/perronegro"
+              href="https://www.instagram.com/biotickets_/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-perro-gray hover:text-perro-red transition-colors duration-300 text-xs font-semibold py-2 px-1 min-h-[44px] flex items-center"
             >
               INSTAGRAM
-            </a>
-            <span className="text-perro-gray">•</span>
-            <a
-              href="https://tiktok.com/@perronegro"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-perro-gray hover:text-perro-red transition-colors duration-300 text-xs font-semibold py-2 px-1 min-h-[44px] flex items-center"
-            >
-              TIKTOK
-            </a>
-            <span className="text-perro-gray">•</span>
-            <a
-              href="https://youtube.com/@perronegro"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-perro-gray hover:text-perro-red transition-colors duration-300 text-xs font-semibold py-2 px-1 min-h-[44px] flex items-center"
-            >
-              YOUTUBE
             </a>
           </div>
 
