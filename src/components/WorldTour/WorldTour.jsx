@@ -16,7 +16,7 @@ const WorldTour = () => {
     {
       date: "05 DE\nSEPTIEMBRE",
       city: "BOGOTÁ",
-      venue: "PLOT",
+      venue: "LOURDES MUSIC HALL",
       highlight: true
     },
     {

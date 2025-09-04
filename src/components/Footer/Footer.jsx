@@ -29,7 +29,7 @@ const Footer = () => {
               05 DE SEPTIEMBRE 2025
             </div>
             <div className="text-perro-red text-base font-bold">
-              BOGOTÁ • PLOT
+              BOGOTÁ • LOURDES MUSIC HALL
             </div>
           </div>
 
