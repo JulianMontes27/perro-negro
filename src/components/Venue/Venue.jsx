@@ -22,7 +22,7 @@ const Venue = () => {
             {/* Venue Name */}
             <div className="bg-perro-red p-6 lg:p-8">
               <h3 className="text-xl sm:text-3xl lg:text-4xl font-black text-gray-100 font-title mb-2">
-                PLOT BOGOTÁ
+                LOURDES MUSIC HALL
               </h3>
               <p className="text-gray-100 text-sm sm:text-lg opacity-90">
                 VENUE OFICIAL - COLOMBIA
@@ -35,8 +35,8 @@ const Venue = () => {
                 DIRECCIÓN
               </h4>
               <p className="text-gray-300 text-sm sm:text-lg leading-relaxed">
-                Km 4.5 Vía La Calera<br />
-                Cundinamarca<br />
+                Kr 13 #64-56<br />
+                Bogotá<br />
                 Colombia
               </p>
             </div>
@@ -46,10 +46,10 @@ const Venue = () => {
 
           {/* Right Side - Dark Map */}
           <div className="relative w-full h-full min-h-[500px] lg:min-h-[600px] cursor-pointer border-t border-b border-perro-gray sm:border-none"
-               onClick={() => window.open(`https://maps.google.com/?q=4.6771048,-74.0222526`, '_blank')}>
+               onClick={() => window.open(`https://maps.google.com/?q=4.6513228,-74.0631569`, '_blank')}>
             <div className="relative w-full h-full overflow-hidden">
               <iframe
-                src="https://maps.google.com/maps?q=4.6771048,-74.0222526&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=4.6513228,-74.0631569&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 width="130%"
                 height="130%"
                 style={{ 

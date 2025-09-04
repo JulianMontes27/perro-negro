@@ -31,7 +31,7 @@ export const imageUrls = {
   
   // Other
   vita: "https://dg1mete104.ufs.sh/f/B88zK5yQuxIQov6kVByQDn5vd6XHbZAgM4eo8NaTKjs2lim1",
-  map: "https://dg1mete104.ufs.sh/f/B88zK5yQuxIQ1aIBVgzr3INGSCy7XiPJhoBQWMO9T4wKdmt0",
+  map: "https://dg1mete104.ufs.sh/f/B88zK5yQuxIQgX0EIYuwPLI5VEGjevqNnhfHbOt9z1s86SQC",
   
   // Video - Now on UploadThing (no egress charges)
   video: "https://dg1mete104.ufs.sh/f/B88zK5yQuxIQiRzmxvt7gfUW5vSHMeyO8hCAs0QBzDRTLxNc"
