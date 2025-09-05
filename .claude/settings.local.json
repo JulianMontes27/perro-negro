@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(/C:\\Users\\rlsan\\Documents\\perro-negro-main/**)",
+      "Read(/C:\\Users\\rlsan\\Documents\\perro-negro-main/**)",
+      "Read(/C:\\Users\\rlsan\\Documents\\perro-negro-main\\public/**)",
+      "Read(/C:\\Users\\rlsan\\Documents\\perro-negro-main\\src/**)",
+      "Read(/C:\\Users\\rlsan\\Documents\\perro-negro-main\\src/**)",
+      "Read(/C:\\Users\\rlsan\\Documents\\perro-negro-main\\src/**)",
+      "Read(/C:\\Users\\rlsan\\Documents\\perro-negro-main\\src\\utils/**)",
+      "Read(/C:\\Users\\rlsan\\Documents\\perro-negro-main\\src\\components\\Hero/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
